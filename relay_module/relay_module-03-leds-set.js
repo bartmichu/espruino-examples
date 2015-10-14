@@ -17,10 +17,10 @@ function updateLed() {
   }
 }
 
-function onInit() {
+E.on("init", function () {
   relayPin.mode("output");
   updateLed();
-}
+});
 
 setWatch(function () {
   relayPin.write(!relayPin.read());

@@ -10,10 +10,10 @@ function updateLed() {
   digitalWrite(leds, relayPin.read() + 1); //1 = 0b01, 2 = 0b10
 }
 
-function onInit() {
+E.on("init", function () {
   relayPin.mode("output");
   updateLed();
-}
+});
 
 setWatch(function () {
   relayPin.write(!relayPin.read());
