@@ -1,5 +1,5 @@
 {
-  "name": "espruino-recipes",
+  "name": "espruino-examples",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bartmichu/espruino-Recipes.git"
+    "url": "git+https://github.com/bartmichu/espruino-examples.git"
   },
   "author": "Michał Bartkowiak",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bartmichu/espruino-Recipes/issues"
+    "url": "https://github.com/bartmichu/espruino-examples/issues"
   },
-  "homepage": "https://github.com/bartmichu/espruino-Recipes#readme",
+  "homepage": "https://github.com/bartmichu/espruino-examples#readme",
   "devDependencies": {
     "eslint": "^5.12.0",
     "espruino": "^0.1.23"
