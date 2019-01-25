@@ -1,7 +1,5 @@
 /*
- On board LED.
+ Blink on-board LED every 300 milliseconds.
  */
 
-setInterval(function () {
-  digitalWrite(LED1, !digitalRead(LED1));
-}, 300);
+setInterval(() => digitalWrite(LED1, !digitalRead(LED1)), 300);

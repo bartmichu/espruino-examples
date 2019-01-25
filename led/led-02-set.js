@@ -1,11 +1,7 @@
 /*
- On board LED.
+ Use separate intervals to switch on-board LED on and off.
  */
 
-setInterval(function () {
-  LED2.reset();
-}, 1000);
+setInterval(() => LED2.reset(), 1000);
 
-setInterval(function () {
-  LED2.set();
-}, 2000);
+setInterval(() => LED2.set(), 2000);

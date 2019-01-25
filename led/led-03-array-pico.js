@@ -1,11 +1,11 @@
 /*
- On board LED (Espruino Pico).
+ Blink all on-board LEDs on Espruino Pico every second using arrays.
  */
 
-var value = 3; //0b11
-var leds = [LED1, LED2];
+let value = 0b11;
+const leds = [LED1, LED2];
 
-setInterval(function () {
+setInterval(() => {
   digitalWrite(leds, value);
-  value = value ? 0 : 3;
+  value = value ? 0b0 : 0b11;
 }, 1000);

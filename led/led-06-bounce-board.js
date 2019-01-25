@@ -1,13 +1,13 @@
 /*
- On board LED (Espruino Board).
+ Animate on-board LEDs on Espruino Board with arrays and modulo operator.
  */
 
-var leds = [LED1, LED2, LED3];
-var values = [1, 2, 4];
-var index = 0;
-var step = 1;
+const leds = [LED1, LED2, LED3];
+const values = [0b001, 0b010, 0b100];
+let index = 0;
+let step = 1;
 
-setInterval(function () {
+setInterval(() => {
   if (index <= 0) {
     step = 1;
   } else if (index >= values.length - 1) {

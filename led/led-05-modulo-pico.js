@@ -1,12 +1,11 @@
 /*
- On board LED (Espruino Pico).
+ Animate on-board LEDs on Espruino Pico with arrays and modulo operator.
  */
 
-var value = 0; //0 = 0b00
+let value = 0b00;
 var leds = [LED1, LED2];
 
-setInterval(function () {
-  //from 1 to 3, where 1 = 0b01, 2 = 0b10, 3 = 0b11
-  value = (value % 3) + 1;
+setInterval(() => {
+  value = (value % 3) + 1; //from 1 to 3, where 1 = 0b01, 2 = 0b10, 3 = 0b11
   digitalWrite(leds, value);
 }, 200);

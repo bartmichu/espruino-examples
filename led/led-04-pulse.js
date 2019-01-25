@@ -1,7 +1,5 @@
 /*
- On board LED.
+ Pulse on-board LED.
  */
 
-setInterval(function () {
-  digitalPulse(LED2, 1, 500);
-}, 2000);
+setInterval(() => digitalPulse(LED2, 1, 500), 2000);
