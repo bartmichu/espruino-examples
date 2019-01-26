@@ -1,13 +1,6 @@
 /*
- On board button and console.
+ Print on-board button events to the console.
  */
 
-
-setWatch(function () {
-  console.log("pushed");
-}, BTN, { repeat: true, edge: "rising", debounce: 50 });
-
-
-setWatch(function () {
-  console.log("released");
-}, BTN, { repeat: true, edge: "falling", debounce: 50 });
+setWatch(() => console.log("button pushed"), BTN, { repeat: true, edge: "rising", debounce: 50 });
+setWatch(() => console.log("button released"), BTN, { repeat: true, edge: "falling", debounce: 50 });

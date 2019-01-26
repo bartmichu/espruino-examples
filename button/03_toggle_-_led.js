@@ -1,8 +1,7 @@
 /*
- On board button and LED.
+ Use on-board button to toggle LED.
  */
 
-
-setWatch(function () {
+setWatch(() => {
   digitalWrite(LED1, !digitalRead(LED1));
 }, BTN, { repeat: true, edge: "rising", debounce: 50 });

@@ -2,9 +2,8 @@
  On board button and LEDs.
  */
 
+const leds = [LED2, LED1];
 
-var leds = [LED2, LED1];
-
-setWatch(function () {
-  digitalWrite(leds, digitalRead(BTN) + 1); //1 = 0b01, 2 = 0b10
+setWatch(() => {
+  digitalWrite(leds, digitalRead(BTN) + 0b01);
 }, BTN, { repeat: true, edge: "both", debounce: 50 });

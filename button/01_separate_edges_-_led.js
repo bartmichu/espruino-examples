@@ -1,13 +1,6 @@
 /*
- On board button and LED.
+ Use LEDs to signal on-board button events.
  */
 
-
-setWatch(function () {
-  LED1.set();
-}, BTN, { repeat: true, edge: "rising", debounce: 50 });
-
-
-setWatch(function () {
-  LED1.reset();
-}, BTN, { repeat: true, edge: "falling", debounce: 50 });
+setWatch(() => LED1.set(), BTN, { repeat: true, edge: "rising", debounce: 50 });
+setWatch(() => LED1.reset(), BTN, { repeat: true, edge: "falling", debounce: 50 });
