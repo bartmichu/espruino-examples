@@ -2,8 +2,9 @@
  Blink all on-board LEDs on Espruino Pico every second using arrays.
  */
 
-let value = 0b11;
+
 const leds = [LED1, LED2];
+let value = 0b11;
 
 setInterval(() => {
   digitalWrite(leds, value);
