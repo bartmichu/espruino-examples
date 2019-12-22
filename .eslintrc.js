@@ -7,6 +7,7 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    'espruino-globals'
   ],
   globals: {
     Atomics: 'readonly',
