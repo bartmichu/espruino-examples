@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bartmichu/espruino-examples/issues"
   },
-  "homepage": "https://github.com/bartmichu/espruino-examples#readme"
+  "homepage": "https://github.com/bartmichu/espruino-examples#readme",
+  "devDependencies": {
+    "espruino": "^0.1.30"
+  }
 }
