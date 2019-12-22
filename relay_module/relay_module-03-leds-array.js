@@ -2,20 +2,20 @@
  Relay module and on board LEDs.
  */
 
-var leds = [LED2, LED1];
-var button = BTN;
-var relayPin = new Pin(A8);
+const leds = [LED2, LED1];
+const button = BTN;
+const relayPin = new Pin(A8);
 
 function updateLed() {
-  digitalWrite(leds, relayPin.read() + 1); //1 = 0b01, 2 = 0b10
+  digitalWrite(leds, relayPin.read() + 1); // 1 = 0b01, 2 = 0b10
 }
 
-E.on("init", function () {
-  relayPin.mode("output");
+E.on('init', () => {
+  relayPin.mode('output');
   updateLed();
 });
 
-setWatch(function () {
+setWatch(() => {
   relayPin.write(!relayPin.read());
   updateLed();
-}, button, {repeat: true, edge: "rising", debounce: 50});
+}, button, { repeat: true, edge: 'rising', debounce: 50 });

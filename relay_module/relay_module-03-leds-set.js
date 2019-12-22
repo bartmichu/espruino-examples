@@ -2,10 +2,10 @@
  Relay module and on board LEDs.
  */
 
-var ledRed = LED1;
-var ledGreen = LED2;
-var button = BTN;
-var relayPin = new Pin(A8);
+const ledRed = LED1;
+const ledGreen = LED2;
+const button = BTN;
+const relayPin = new Pin(A8);
 
 function updateLed() {
   if (relayPin.read()) {
@@ -17,12 +17,12 @@ function updateLed() {
   }
 }
 
-E.on("init", function () {
-  relayPin.mode("output");
+E.on('init', () => {
+  relayPin.mode('output');
   updateLed();
 });
 
-setWatch(function () {
+setWatch(() => {
   relayPin.write(!relayPin.read());
   updateLed();
-}, button, {repeat: true, edge: "rising", debounce: 50});
+}, button, { repeat: true, edge: 'rising', debounce: 50 });

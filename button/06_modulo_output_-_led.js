@@ -8,4 +8,4 @@ const leds = [LED2, LED1];
 setWatch(() => {
   values = (values % 2) + 1;
   digitalWrite(leds, values);
-}, BTN, { repeat: true, edge: "rising", debounce: 50 });
+}, BTN, { repeat: true, edge: 'rising', debounce: 50 });

@@ -2,24 +2,24 @@
  Reed switch.
  */
 
-var door = new Pin(A8); //pull-up
+const door = new Pin(A8); // pull-up
 
-E.on("init", function () {
-  door.mode("input");
+E.on('init', () => {
+  door.mode('input');
 });
 
 function doorOpenedHandler() {
-  console.log("door opened");
+  console.log('door opened');
 }
 
 function doorHeldHandler() {
-  console.log("door held");
+  console.log('door held');
 }
 
-setWatch(function () {
+setWatch(() => {
   doorOpenedHandler();
-}, door, {repeat: true, edge: "falling", debounce: 5});
+}, door, { repeat: true, edge: 'falling', debounce: 5 });
 
-setWatch(function () {
+setWatch(() => {
   doorHeldHandler();
-}, door, {repeat: true, edge: "falling", debounce: 2000});
+}, door, { repeat: true, edge: 'falling', debounce: 2000 });

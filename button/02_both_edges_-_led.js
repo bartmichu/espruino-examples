@@ -4,4 +4,4 @@
 
 setWatch(() => {
   digitalWrite(LED1, digitalRead(BTN));
-}, BTN, { repeat: true, edge: "both", debounce: 50 });
+}, BTN, { repeat: true, edge: 'both', debounce: 50 });

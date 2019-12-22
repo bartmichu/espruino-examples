@@ -6,4 +6,4 @@ let state = 0;
 setWatch(() => {
   state = !state;
   console.log(state);
-}, BTN, { repeat: true, edge: "rising", debounce: 50 });
+}, BTN, { repeat: true, edge: 'rising', debounce: 50 });

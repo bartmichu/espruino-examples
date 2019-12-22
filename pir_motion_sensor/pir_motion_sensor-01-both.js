@@ -2,13 +2,13 @@
  PIR Motion Sensor and on board LED.
  */
 
-var sensor = new Pin("A8");
-var led = LED1;
+const sensor = new Pin('A8');
+const led = LED1;
 
-E.on("init", function () {
-  sensor.mode("input");
+E.on('init', () => {
+  sensor.mode('input');
 });
 
-setWatch(function () {
+setWatch(() => {
   digitalWrite(led, sensor.read());
-}, sensor, {repeat: true, edge: "both", debounce: 10});
+}, sensor, { repeat: true, edge: 'both', debounce: 10 });
