@@ -2,8 +2,9 @@
  On board button and LEDs.
  */
 
-let values = 0;
+
 const leds = [LED2, LED1];
+let values = 0;
 
 setWatch(() => {
   values = (values % 2) + 1;
