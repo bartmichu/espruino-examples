@@ -3,4 +3,4 @@
  */
 
 
-setWatch(() => console.log(digitalRead(BTN)), BTN, { repeat: true, edge: 'both', debounce: 50 });
+setWatch((e) => console.log(e.state), BTN, { repeat: true, edge: 'both', debounce: 50 });

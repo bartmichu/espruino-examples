@@ -3,6 +3,6 @@
  */
 
 
-setWatch(() => {
-  digitalWrite(LED1, digitalRead(BTN));
+setWatch((e) => {
+  digitalWrite(LED1, e.state);
 }, BTN, { repeat: true, edge: 'both', debounce: 50 });
