@@ -1,5 +1,10 @@
 /*
- Relay module.
+ Use a button to toggle relay module.
+
+ Components used in this example:
+ - Espruino Pico
+ - Button (built-in)
+ - Relay module
  */
 
 

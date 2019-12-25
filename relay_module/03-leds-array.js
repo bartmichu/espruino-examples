@@ -1,5 +1,11 @@
 /*
- Relay module and on board LEDs.
+ Use a button to toggle relay module. LEDs will be synced with relay.
+
+ Components used in this example:
+ - Espruino Pico
+ - Button (built-in)
+ - 2x LED (built-in)
+ - Relay module
  */
 
 
