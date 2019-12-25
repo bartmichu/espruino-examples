@@ -1,8 +1,14 @@
 /*
- PIR Motion Sensor and on board LED.
+ Flash LED when sensor is triggered.
+
+ Components used in this example:
+ - Espruino Pico
+ - LED (built-in)
+ - PIR Motion Sensor
  */
 
-const sensor = new Pin('A8');
+
+const sensor = new Pin(A8);
 const led = LED1;
 
 E.on('init', () => {
