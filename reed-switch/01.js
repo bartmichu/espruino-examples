@@ -2,6 +2,7 @@
  Reed switch and on board LED.
  */
 
+
 const door = new Pin(A8);
 const led = LED1;
 

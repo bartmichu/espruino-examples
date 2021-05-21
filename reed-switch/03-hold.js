@@ -2,6 +2,7 @@
  Reed switch.
  */
 
+
 const door = new Pin(A8); // pull-up
 
 E.on('init', () => {
